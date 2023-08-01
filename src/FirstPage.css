@@ -1,0 +1,14 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+.signup-form {
+  display: flex;
+  justify-content: space-between;
+}
+.input-val {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+

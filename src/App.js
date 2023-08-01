@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import FirstPage from "./FirstPage";
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import SecondPage from "./SecondPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <h1 className="heading">My Fibonacci App</h1>
+        <Routes>
+          <Route path="/" element={<FirstPage />}></Route>
+          <Route path="result" element={<SecondPage />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
